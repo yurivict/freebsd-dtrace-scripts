@@ -10,7 +10,7 @@ In order to allow DTrace to show meaningful user stacks, you need:
 * to add ustack(); call to the corresponding probe script
 * to have these lines in /etc/make.conf:
 
-  ## allow DTrace stack trace to pick up stack
+  \#\# allow DTrace stack trace to pick up stack
   STRIP=
   CFLAGS+=-fno-omit-frame-pointer
   CXXFLAGS+=-fno-omit-frame-pointer
