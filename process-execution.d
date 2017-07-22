@@ -18,6 +18,6 @@ dtrace:::BEGIN
 proc:::exec-success
 {
    printf("%-20Y %6d %6d %6d %s\n", walltimestamp,
-   uid, ppid, pid, execname);
+     uid, ppid, pid, execname);
 }
 
