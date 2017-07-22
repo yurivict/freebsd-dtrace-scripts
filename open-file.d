@@ -14,4 +14,5 @@ syscall::open:entry /execname == $$1/ {
 
 syscall::open:return /execname == $$1/ {
   printf("file=%s flags=%x errno=%d @tm=%d dt=%d pid=%d", copyinstr(self->file), self->flags, errno, timestamp, timestamp-self->tm, pid);
+  /*ustack();*/
 }
