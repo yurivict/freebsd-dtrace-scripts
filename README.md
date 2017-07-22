@@ -1,2 +1,6 @@
 # freebsd-dtrace-scripts
-Yseful DTrace scripts for FreeBSD
+Useful DTrace scripts for FreeBSD
+
+This repository contains various useful, ready-to-use DTrace scripts.
+
+All scripts require root permissions.
