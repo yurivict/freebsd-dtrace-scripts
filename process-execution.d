@@ -12,7 +12,7 @@
 
 dtrace:::BEGIN
 {
-  printf("%-20s %6s %6s %6s %s\n", "ENDTIME",
+  printf("%-20s %6s %6s %6s %s\n", "STARTTIME",
     "UID", "PPID", "PID", "PROCESS");
 }
 proc:::exec-success
