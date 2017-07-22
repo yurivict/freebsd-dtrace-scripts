@@ -12,8 +12,11 @@ In order to allow DTrace to show meaningful user stacks, you need:
 
   \#\# allow DTrace stack trace to pick up stack
   STRIP=
+
   CFLAGS+=-fno-omit-frame-pointer
+
   CXXFLAGS+=-fno-omit-frame-pointer
+
   CPPFLAGS+=-fno-omit-frame-pointer
 
 * to have proper symbols in the binaries by rebuilding the ports: portupgrade -f {port-name}
