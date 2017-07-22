@@ -5,7 +5,7 @@ This repository contains various useful, ready-to-use DTrace scripts.
 
 All scripts require root permissions.
 
-## User stacks
+# User stacks
 In order to allow DTrace to show meaningful user stacks, you need:
 * to add ustack(); call to the corresponding probe script
 * to have these lines in /etc/make.conf:
