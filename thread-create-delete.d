@@ -1,7 +1,7 @@
 #!/usr/sbin/dtrace -s
 
 /*
- * Trace thread creation and deletion for a process(es) with a given name
+ * Trace thread creation and deletion for process(es) with a given name
  * Args: process-name
  */
 
