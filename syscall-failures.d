@@ -5,6 +5,16 @@
  * Args: process-name
  */
 
-syscall:::return /execname == $$1 && arg1 == -1/ {
+/*
+#syscall:::return /execname == $$1 && arg1 == -1/ {
   printf("failure: errno=%d @tm=%d pid=%d", errno, timestamp, pid);
+  ustack();
+  stack();
+}
+*/
+
+syscall:::return /execname == $$1 && errno > 0/ {
+  printf("failure: errno=%d @tm=%d pid=%d", errno, timestamp, pid);
+  ustack();
+  stack();
 }
