@@ -1,7 +1,7 @@
 #!/usr/sbin/dtrace -s
 
 /*
- * Trace failed syscalls with a given name
+ * Trace internal functions in a process with a given pid
  * Args: pid
  *       function-name
  */
