@@ -1,19 +1,12 @@
 #!/usr/sbin/dtrace -s
 
 /*
- * Trace failed syscalls for process(es) with a given name
- * Args: process-name
+ * Trace failed syscalls with a given name and a given errno
+ * Args: syscall-name
+ *       errno
  */
 
-/*
-#syscall:::return /execname == $$1 && arg1 == -1/ {
-  printf("failure: errno=%d @tm=%d pid=%d", errno, timestamp, pid);
-  ustack();
-  stack();
-}
-*/
-
-syscall:::return /execname == $$1 && errno > 0/ {
+syscall::$$1:return /errno == $2/ {
   printf("failure: errno=%d @tm=%d pid=%d", errno, timestamp, pid);
   ustack();
   stack();
