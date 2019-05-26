@@ -26,5 +26,5 @@ syscall::openat:entry /execname == $$1/ {
 
 syscall::openat:return /execname == $$1/ {
   printf("file=%s flags=%x errno=%d return-fd=%d @tm=%d dt=%d pid=%d", copyinstr(self->file), self->flags, errno, arg0, timestamp, timestamp-self->tm, pid);
-  /*ustack();*/
+  ustack();
 }
